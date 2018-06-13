@@ -7,14 +7,10 @@ import time
 
 cgitb.enable()
 
-f= open("guru99.txt","w+")
+f = open("guru99.txt","w+")
 ts = time.time()
 st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
-
-f.write("got here! - " + st )
-
 f.write(sys.stdin.read())
-
 f.close()
 
 print ("Content-Type: text/plain\n\r")
